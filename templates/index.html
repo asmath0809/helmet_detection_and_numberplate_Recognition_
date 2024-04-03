@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Helmet Detection System</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <h1>Helmet Detection And Automatic Number Plate Recognition</h1>
+</head>
+<body>
+<div class="container">
+    
+    <div class="div1">
+        <input type="file" id="fileInput" accept=".mp4, .avi">
+    </div>
+    <div class="div2">
+    <button onclick="startProcessing()">Start Processing</button>
+    </div>
+    <p id="status"></p>
+</div>
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html> 
+
