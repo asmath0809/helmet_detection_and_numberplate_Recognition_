@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    print("Rendering index.html")
     return render_template('index.html')
 
 @app.route('/process_video', methods=['POST'])
@@ -17,6 +18,7 @@ def process_video():
     # Save the uploaded video file
     video_path = 'uploaded_video.mp4'
     video_file.save(video_path)
+    print(f"Video file saved to: {video_path}")
 
     try:
         # Execute the existing Python script for video processing
